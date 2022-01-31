@@ -1,0 +1,19 @@
+<div *ngIf="showImages" class="container">
+    <div *ngFor="let item of data let i=index">
+        <img class="item" src="{{item.Images}}" width="300" height="300">
+        <br>
+        <div>
+            <label>comment</label>:   {{item.comment}}                <br>
+            <label>created_date</label>:   {{item.created_date}}      <br>
+            <label>likeStatus</label>:  {{item.likeStatus}}       <br>
+            <label>like_setting</label>:  {{item.like_setting}}      <br>
+            <img src ="{{item.newsIcon}}" width="50" height="50">    <br>
+            <label>post_title</label>:  {{item.post_title}}     <br>
+            <label>totalComment</label>:  {{item.totalComment}}    <br>
+            <label>totalLike</label>:  {{item.totalLike}}     <br>
+            <span>post_content: </span>
+            <div id="dynamic{{i}}"></div>  <br>
+            <button (click)="navigate(item.auto_id)">{{item.buttonText}} </button>
+        </div>
+    </div>
+</div>
